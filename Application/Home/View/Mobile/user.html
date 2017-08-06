@@ -1,0 +1,218 @@
+<include file="./Application/Home/View/Mobile/sub_head.html" />
+<body>
+	<div class="easyui-navpanel">
+		<header>
+			<div class="m-toolbar">
+				<div class="m-left">
+                    <a href="http://{$Think.server.server_name}/Mobile/" class="easyui-linkbutton m-back"  plain="true" outline="true">首 页</a>
+               </div>
+				<div class="m-title">{$user.company_name}</div>
+				<div class="m-right">
+                    <a href="javascript:void(0)" onclick="$('#message_box').dialog('open').dialog('center')" class="easyui-linkbutton" iconCls="icon-tip" plain="true" outline="true">联系我们</a>
+               </div>
+			</div>
+		</header>
+		<div class="easyui-tabs" id="index_tabs" data-options="fit:true,border:false,tabWidth:80,tabHeight:35">
+        <div title="出售" style="padding:10px">
+			<ul id="list" class="m-list">
+				<li class="info_li">
+				<foreach name="sellHouse" item="s">
+									<li class="info_li" id="top_{$s.id}" >
+									    <a href="#" onclick="openDetail({$s.id},1);">
+											<gt name="s.hurry_to_time" value="1">
+												<div class="list-header" style="color:red;">[急售][置顶]{$s.title}</div>
+											<else/> 
+												<div class="list-header">[置顶]{$s.title}</div>
+											</gt>
+											<div class="list-content">房源编号:{$s.id} {$s.zone_name} {$s.size}平 {$s.price}</div>
+											<div class="list-content">联系人:{$s.personal_name} {$s.create_time}</div>
+									     </a>
+									</li>
+				</foreach>
+			</ul>
+			<ul class="m-list" id="moreHousesList0"></ul>
+			<ul class="m-list">
+					<li style="text-align:center" onClick="getMoreHouseList()" id="moreresults0">查看更多房源</li>
+			</ul>
+	   </div>
+        <div title="出租" style="padding:10px">
+           <ul id="list" class="m-list">
+				<li>
+					<foreach name="rentHouse" item="s">
+									<li class="info_li" id="top_{$s.id}" >
+									    <a href="#" onclick="openDetail({$s.id},1);">
+										<gt name="s.hurry_to_time" value="1">
+											<div class="list-header" style="color:red;">[急售][置顶]{$s.title}</div>
+										<else/> 
+											<div class="list-header">[置顶]{$s.title}</div>
+										</gt>
+										<div class="list-content">房源编号:{$s.id} {$s.zone_name} {$s.size}平 {$s.price}</div>
+										<div class="list-content">联系人:{$s.personal_name} {$s.create_time}</div>
+									</a>
+									</li>
+					</foreach>
+				</li>
+			</ul>
+			<ul class="m-list" id="moreHousesList1"></ul>
+			<ul class="m-list">
+					<li style="text-align:center" onClick="getMoreHouseList()" id="moreresults1">查看更多房源</li>
+			</ul>
+		</div>
+		 <div title="门市" style="padding:10px">
+			<ul id="list" class="m-list">
+				<li>
+					<foreach name="shopHouse" item="s">
+									<li class="info_li" id="top_{$s.id}" >
+									    <a href="#" onclick="openDetail({$s.id},1);">
+										<gt name="s.hurry_to_time" value="1">
+											<div class="list-header" style="color:red;">[急售][置顶]{$s.title}</div>
+										<else/> 
+											<div class="list-header">[置顶]{$s.title}</div>
+										</gt>
+										<div class="list-content">房源编号:{$s.id} {$s.zone_name} {$s.size}平 {$s.price}</div>
+										<div class="list-content">联系人:{$s.personal_name} {$s.create_time}</div>
+									</a>
+									</li>
+					</foreach>
+				</li>
+			</ul>
+			<ul class="m-list" id="moreHousesList2"></ul>
+			<ul class="m-list">
+					<li style="text-align:center" onClick="getMoreHouseList()" id="moreresults2">查看更多房源</li>
+			</ul>
+		</div>
+        <div title="车位" style="padding:10px">
+			 <ul id="list" class="m-list">
+				<li>
+					<foreach name="garageHouse" item="s">
+									<li class="info_li" id="top_{$s.id}" >
+									    <a href="#" onclick="openDetail({$s.id},1);">
+										<gt name="s.hurry_to_time" value="1">
+											<div class="list-header" style="color:red;">[急售][置顶]{$s.title}</div>
+										<else/> 
+											<div class="list-header">[置顶]{$s.title}</div>
+										</gt>
+										<div class="list-content">房源编号:{$s.id} {$s.zone_name} {$s.size}平 {$s.price}</div>
+										<div class="list-content">联系人:{$s.personal_name} {$s.create_time}</div>
+									</a>
+									</li>
+					</foreach>
+				</li>
+			</ul>
+			<ul class="m-list" id="moreHousesList3"></ul>
+			<ul class="m-list">
+					
+					<li style="text-align:center" onClick="getMoreHouseList()" id="moreresults3">查看更多房源</li>
+			</ul>
+		</div>
+    </div>
+    <style scoped>
+        p{
+            line-height:150%;
+        }
+    </style> 	
+		<div id="message_box" class="easyui-dialog" style="padding:20px 6px;width:80%;" data-options="inline:true,modal:true,closed:true,title:'联系我们'">
+			<p>联系人：{$user.person_name}</p>
+			<p>电话：{$user.tel}</p>
+			<p>地址：{$user.address}</p>
+			<div class="dialog-button">
+				<a href="javascript:void(0)" class="easyui-linkbutton" style="width:100%;height:35px" onclick="$('#message_box').dialog('close')">返 回</a>
+			</div>
+		</div>
+		
+	</div>
+<script>
+function openDetail(id,isTop){
+	if(isTop){
+			if($("#top_detail_"+id).length>0){ //如果已经打开就退出
+				closeDetail(id,1);
+				return;
+			}
+			$.ajax({ 
+				url: "http://{$Think.server.server_name}/Mobile/getHouseInfo", 
+				type: 'POST',
+				dataType: 'html',
+				data: 'id='+id+'&&isTop=1',
+				beforeSend: function(){
+					 //$('#loading').fadeIn();	
+				},
+				success: function(data){
+					$('#top_'+id).append(data);
+					if(data){
+						//$('#loading').fadeOut();
+					}else{
+						//$('#moreresults'+tabNo).fadeOut();
+						//$('#loading').fadeOut();
+						//$('#nomoreresults').fadeIn();
+					} 
+				},
+				error:function(){ alert('ajax error'); },
+			});
+	}else{
+			if($("#detail_"+id).length>0){
+				closeDetail(id);
+				return;
+			}
+			$.ajax({ 
+				url: "http://{$Think.server.server_name}/Mobile/getHouseInfo", 
+				type: 'POST',
+				dataType: 'html',
+				data: 'id='+id,
+				beforeSend: function(){
+					 //$('#loading').fadeIn();	
+				},
+				success: function(data){
+					$('#'+id).append(data);
+					if(data){
+						//$('#loading').fadeOut();
+					}else{
+						//$('#moreresults'+tabNo).fadeOut();
+						//$('#loading').fadeOut();
+						//$('#nomoreresults').fadeIn();
+					} 
+				},
+				error:function(){ alert('ajax error'); },
+			});
+	}
+}
+function closeDetail(id,isTop){
+	if(isTop){
+		$("#top_detail_"+id).remove();
+	}else{
+		$("#detail_"+id).remove();
+	}
+	
+}
+/*监听tab*/
+$('#index_tabs').tabs({
+        onSelect: function () {
+			getMoreHouseList();
+        }
+});
+function getMoreHouseList(){ 
+			var tab = $('#index_tabs').tabs('getSelected');
+			var tabNo = $('#index_tabs').tabs('getTabIndex',tab); //index 0:出售 1:出租 2:门市/厂房 3:车库/车位
+			$.ajax({ 
+				url: "http://{$Think.server.server_name}/Mobile/getMoreHouseList", 
+				type: 'POST',
+				dataType: 'html',
+				data: 'tabNo='+tabNo+'&&liNo='+$('#moreHousesList'+tabNo).children('li').size()+'&&user_id='+{$user.id},
+				beforeSend: function(){
+					 $('#loading').fadeIn();	
+				},
+				success: function(data){
+					if(data){
+						$('#moreHousesList'+tabNo).append(data);
+						$('#loading').fadeOut();
+					}else{
+						$('#moreresults'+tabNo).fadeOut();
+						$('#loading').fadeOut();
+						$('#nomoreresults').fadeIn();
+					} 
+				},
+				error:function(){ alert('ajax error'); },
+			});
+}
+</script>
+</body>	
+</html>

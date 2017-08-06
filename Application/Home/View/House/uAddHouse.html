@@ -1,0 +1,78 @@
+<div id="content">
+	  <script type="text/javascript" src="__PUBLIC__/js/jquery-labelauty.js"></script>
+								<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/jquery-labelauty.css">	
+							<div style="margin-left:50px;">
+								<ul class="dowebok">
+									<li><input type="radio" name="way" checked="checked" data-labelauty="出 售"></li>
+									<li><input type="radio" name="way" data-labelauty="出 租"></li>
+									
+								</ul>
+								<ul class="dowebok">
+									<li><input type="radio" name="type" checked="checked" data-labelauty="二手房"></li>
+									<li><input type="radio" name="type" data-labelauty="门 市"></li>
+									<li><input type="radio" name="type" data-labelauty="车 库"></li>
+									<li><input type="radio" name="type" data-labelauty="厂 房"></li>
+								</ul>
+								<div class="my_input">小区或街道名称:
+									<input  class="easyui-combobox" style="height:26px;width:220px;" data-options="
+																loader: myloader,
+																mode: 'remote',
+																valueField: 'id',
+																textField: 'text',
+																formatter: formatItem,
+																panelHeight:'auto',
+																">	</input>
+								</div>
+								<div class="my_input">
+									面 积:
+									<input style="width:100px;" class="easyui-textbox" type="text" field="tel" name="tel"  data-options="required:true"></input>
+									平方米
+								</div>
+								<div class="my_input">
+									价 格:
+									<input style="width:100px;" class="easyui-textbox" type="text" field="tel" name="tel" ></input>
+									万元<span style="font-size:14px;">(价格面议请留空)</span>
+								</div>
+								<div class="my_input">
+									<div sytle="margin-bottom:10px;">详细描述:<span style="font-size:14px;">(可从word直接粘贴文字)</span></div>
+										<script type="text/plain" id="myEditor" style="width:600px;height:240px;">
+												<p>我勒个去:!!!</p>
+										</script>
+									    <script type="text/javascript">
+										//var um = UM.getEditor('myEditor');//实例化编辑器
+											$(function() {          
+											var um = UM.getEditor('myEditor', { 
+												toolbar: ['bold forecolor image video'],   
+											 UEDITOR_HOME_URL: "__PUBLIC__/js/editor/",                
+													 imageUrl: "{:U('Home/Img/upload')}",              
+													imagePath: "__PUBLIC__/upload/",    
+													wordCount: false,               
+											elementPathEnabled: false,            
+											 autoFloatEnabled: false,         
+													 textarea: 'content'            
+													 });    
+											}); 
+										</script>
+								
+								</div>
+								<div  class="my_input">
+									<div style="float:left;line-height:60px;">增值服务:</div>
+									<div style="float:left;">
+										<ul class="dowebok">
+											<li><input type="checkbox" name="tag" data-labelauty="首页置顶(1元/天)"></li>
+											<li><input type="checkbox" name="tag" data-labelauty="标题变红(0.5元/天)"></li>
+										</ul>
+									</div>
+									<div id="tag_days" style="display:none;float:left;line-height:60px;">
+										天数:<input class="easyui-numberspinner" value="1" data-options="min:1,max:100" style="width:80px;"></input>
+										<span style="font-size:14px;">可用余额:<span style="color:#DA5E43;">1999元</span> <a style="color:#45A21C;">充值</a></span>
+									</div>
+								</div>
+								<div style="clear:both;"></div>
+								<div style="background-color:#DA5E43;" class="yuan_logo_button" >
+									<div style="margin:10px 0 0 5px;">确认发布</div>
+								 </div>
+												
+							</div>
+
+</div>

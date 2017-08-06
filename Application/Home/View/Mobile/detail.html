@@ -1,0 +1,40 @@
+<include file="./Application/Home/View/Mobile/sub_head.html" />
+<body>
+<style>
+ul {list-style:none;}
+li {margin-bottom:7px;}
+</style>
+	<div class="easyui-navpanel">
+
+		<header>
+			<div class="m-toolbar">
+				<div class="m-title">搜索结果</div>
+				<div class="m-left">
+                    <a href="http://{$Think.server.server_name}/mobile/" class="easyui-linkbutton m-back" data-options="plain:true,outline:true">返回</a>
+                </div>
+			</div>
+		</header>
+		
+		<footer>
+			<div class="m-toolbar">
+				<div class="m-title">www.gcfang.cn - 简约不简单</div>
+			</div>
+		</footer>
+		
+		  <div style="text-align:left;margin:5px 30px;font-size:14px;">
+		   <span style="font-weight:bold;">{$house.title}</span>
+            <ul>
+					 
+					 <li>房源编号：{$house.id} &nbsp; 发布时间：{$house.create_time}</li>
+					 <li>面积：{$house.size}平 价格：{$house.price} </li>
+					 <li>联系人： {$house.personal_name} {$house.personal_tel} </li>
+			 </ul>
+		详细信息： {$house.content}
+		</div>
+	</div>
+	
+	
+<script>
+</script>
+</body>	
+</html>

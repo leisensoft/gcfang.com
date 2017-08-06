@@ -1,0 +1,25 @@
+/*小区信息*/
+.info_box div{float:left;height:200px;padding-top:10px;}
+.info_box {border:1px solid #ccc;width:980px;height:100%;float:left;margin-top:10px;}
+.house_type{width:80px;display:inline-block;text-align:left;padding-left:10px;line-height:30px;font-size:18px;}
+.house_sell{width:50px;display:inline-block;}
+.house_sell_title{width:50px;display:inline-block;font-weight:bold;}
+/*信息列表*/
+.info_li span{margin-top:0px;}
+.info_tabs{width:770px;float:left;min-height:500px;}
+.info_tabs ul li{height:30px;margin-top:0px;padding-top:0px; cursor:pointer;font: 14px/1.5 Tahoma,"Microsoft Yahei","Simsun";border-bottom: 1px solid #CDCDCD;border-radius: 15px;}
+.info_tabs ul li:hover{background-color:#D0D5DB;}
+.info_tabs ul li span{display:-moz-inline-box;display:inline-block;-moz-inline-box;display:inline-block;}
+.info_tabs_zone{color:#45A21C;margin-left:3px;width:90px;}
+.info_tabs_price{color:#DA5E43;margin-left:5px;width:66px;}
+.info_tabs_size{color:grey;margin-left:5px;width:66px;}
+.info_tabs_date{color:grey;margin-left:3px;width:62px;font-size:15px;}
+.info_tabs_title{margin:0 5px 0 10px;height:22px;width:486px;display:font-size:14px;overflow:hidden;}
+
+.house_page{background-color:#45A21C;color:white;font-size:16px;border-radius:5px;text-align:center;margin:10px 290px;}
+/*加载更多*/
+.loading {float:left;background:#DA5E43;color:white;font-size:20px;padding:5px 10px;text-align:center;width:700px;margin:0px auto;display:none;border-radius: 5px;}
+.loadingmore {float:left;background:#DA5E43;color:white;font-size:20px;padding:5px 10px;text-align:center;width:728px;margin:0px auto;display:block;border-radius: 15px;cursor:pointer;}
+.loadingmore:hover { border:1px solid grey;color:black;}
+/*右侧广告*/
+.ad_box_right{width:200px;height:85px;float:right;border:1px solid #ccc;}

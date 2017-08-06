@@ -1,0 +1,122 @@
+.header {width: 980px; height: 80px; margin: 0px auto;}
+.header_logo {float:left;width: 200px;background: none repeat scroll 0% 0% transparent;position: relative;}
+.header_search {float:left;width: 400px;margin: 26px 0px 0px 100px;}
+
+.header_date {width: 145px;line-height: 26px;height: 58px;text-align: center;}
+.header_date span{float: left;margin-top:15px;font-size:15px;}
+.header_login {width: 213px;padding: 14px 0px 0px 24px;height: 60px;}
+.header_logo, .header_date, .header_login, .header_weather{
+    display: inline-block;
+    float: left;
+    height: 76px;
+    margin-top: 2px;
+	overflow: hidden;
+}
+.header_news {
+	line-height: 24px;
+    float: right;
+    width: 100px;
+    font-size: 15px;
+    padding-top: 20px;
+    font-family: "SimSun";
+}
+
+
+/* 仿QQ商城点击左右滚动jquery焦点图特效插件 */
+.roll_box{width:980px;margin:0px auto;}
+.focus {width:980px; height:160px; overflow:hidden; position:relative;}
+.focus ul {height:380px; position:absolute;}
+.focus ul li {float:left; width:980px; height:160px; overflow:hidden; position:relative; background:#000;}
+.focus ul li div {position:absolute; overflow:hidden;}
+.focus .btnBg {position:absolute; width:980px; height:20px; left:0; bottom:0; background:#000; display:none;}
+.focus .btn {position:absolute; width:780px; height:23px; padding:0px 10px 0px 10px; right:0; bottom:6px; text-align:right;}
+.focus .btn span {display:inline-block; _display:inline; _zoom:1; width:25px; height:24px; line-height:24px; text-align:center; _font-size:0; margin-left:5px; cursor:pointer; background:#fff;}
+.focus .btn span.on {background:#fff;}
+.focus .preNext {width:45px; height:100px; position:absolute; top:26px; background:url(../img/roll_pic/sprite.png) no-repeat 0 0; cursor:pointer;}
+.focus .pre {left:0;}
+.focus .next {right:0; background-position:right top;}
+
+/*中介登陆&个人发布&品牌中介*/
+.user_login {overflow:hidden; position:relative; margin-top:6px; height:100%;float:left;cursor:pointer; width:156px;}
+
+.login_box{width:980px;height:160px;margin:5px auto;}
+.yuan_login_button { 
+font-size:26px;
+font-weight:bold;
+color:white; 
+border: 2px solid #C0C0C0; 
+-moz-border-radius: 10px; 
+-webkit-border-radius: 10px; 
+border-radius: 10px; 
+position:relative; 
+padding:5px; 
+background:#FFF; 
+z-index:2; 
+behavior: url(iecss3.htc); 
+}
+/*商家展示*/
+.brand{width:819px;height:152px;float:left;border:1px solid #C0C0C0; margin:3px 0 5px 3px;}
+.main_box{width:980px;height:auto;margin:0px auto; border:1px solid grey;}
+.search_box{width:100%;height:40px;float:left; }
+.info_box{widht:100%;height:50px;float:left; border:1px solid green;}
+
+/*中介列表左滚动*/
+#mrq{width:819px; margin-top:9px;} 
+#Marquee_x { overflow:hidden; width: 819px }  
+#Marquee_x ul li ,#Marquee_x ul li div{ float:left;line-height:25px;overflow:hidden} /* 横向滚动必须让所有li左浮动 */ 
+#Marquee_x ul li div{ float:left;line-height:25px;height:141px; width:142px; overflow:hidden} 
+#Marquee_x ul li div img{ border:1px solid #DADADA; width:140px; height:115px; display:block} 
+#Marquee_x ul li div span{font-weight:bold; display:block;text-align:center;} 
+
+/*登陆按钮*/
+.my_button{color:white;}
+.my_button:hover{color:black;}
+
+/*信息列表*/
+.info_li span{margin-top:3px;}
+.info_tabs{width:770px;float:left;min-height:500px;}
+.info_tabs ul li{height:30px;margin-top:0px;padding-top:0px; cursor:pointer;font: 15px/1.5 Tahoma,"Microsoft Yahei","Simsun";border-bottom: 1px solid #CDCDCD;border-radius: 15px;}
+.info_tabs ul li:hover{background-color:#D0D5DB;}
+.info_tabs ul li span{display:-moz-inline-box;display:inline-block;-moz-inline-box;display:inline-block;}
+.info_tabs_zone{color:#45A21C;margin-left:3px;width:90px;}
+.info_tabs_price{color:#DA5E43;margin-left:5px;width:66px;}
+.info_tabs_size{color:grey;margin-left:5px;width:66px;}
+.info_tabs_date{color:grey;margin-left:3px;width:62px;font-size:15px;}
+.info_tabs_title{margin:0 5px 0 10px;height:22px;width:396px;display:font-size:14px;overflow:hidden;}
+.house_page{background-color:#45A21C;color:white;font-size:16px;border-radius:5px;text-align:center;margin:10px 290px;}
+/*右侧广告*/
+.ad_box_right{width:200px;height:85px;float:right;border:1px solid grey;text-align:center;margin:3px 3px 3px 3px;
+background-color:#FFFFFF;
+-moz-border-radius: 10px; 
+ border-radius: 10px; 
+-webkit-border-radius: 10px;}
+.ad_box_title{font-size:18px;font-weight:bold;}
+
+/*友情链接*/
+.friend_link_box{width:980px;height:30px;margin:6px auto;background-color:#F6F6F6;}
+.friend_link_box a{float: left;line-height: 24px;height: 24px;overflow: hidden;padding: 0px 10px;color: #666;font-size: 14px;}
+.friend_link_box a:hover{text-decoration:underline;}
+/*加载更多*/
+.loading {float:left;background:#DA5E43;color:white;font-size:20px;padding:5px 10px;text-align:center;width:700px;margin:0px auto;display:none;border-radius: 5px;}
+.loadingmore {float:left;background:#DA5E43;color:white;font-size:20px;padding:5px 10px;text-align:center;width:728px;margin:0px auto;display:block;border-radius: 15px;cursor:pointer;}
+.loadingmore:hover { border:1px solid grey;color:black;}
+/*搜索loading图片*/
+.textbox-addon-right{width:0px;}
+.combo-arrow {background: transparent url("../Public/icon/loading.gif") no-repeat scroll center center;}
+/*合作商家广告*/
+.user_ad {margin:3px 5px 2.5px 5px;width:151px;height:70px;border:1px solid #808080;float:left;
+background-color:#FFFFFF;
+-moz-border-radius: 10px; 
+-webkit-border-radius: 10px;
+ border-radius: 10px; }
+ .user_ad_title{font-size:18px;text-align:center;margin-top:5px;font-weight:bold;}
+ .user_ad_tel{margin-top:15px;text-align:center;}
+ /*顶部搜索按钮 地图找房按钮*/
+ .search_button{};
+ .mapHouse_button{}
+
+
+
+
+
+

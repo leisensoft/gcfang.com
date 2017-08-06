@@ -1,0 +1,85 @@
+<include file="./Application/Home/View/index/sub_header.html" />
+</head>	
+<body>
+		<include file="./Application/Home/View/index/sub_top.html" />
+		<include file="./Application/Home/View/index/sub_nav.html" />
+<style>
+.search_form{margin:15px 10px 15px 20px;}
+.how_to_recommend a:hover{text-decoration:underline;}
+.house_table{width:100%;height:50px;border:0px solid blue;}
+.house_info_list_main{height:100%;width:100%;border:0px solid green;float:left;}
+.list_title{width:430px;font-size:16px;font-weight:bold;margin:2px 0 0 10px;color:#000;float:left;}
+.house_zone{width:140px;font-size:20px;font-weight:bold;float:left;color:#45A21C;}
+.house_price{width:90px;font-size:20px;float:left;}
+.house_price span{color:#DA5E43;}
+.house_size{width:90px;font-size:20px;float:left;}
+.house_label_free{height:100%;width:100px;border:0px solid grey;float:left;}
+.list_user{float:left;}
+.lab2{
+		margin:0 0 2px 3px;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+		position: relative;
+		cursor: pointer;
+		font-size:14px;
+		color:white;
+		display:-moz-inline-box;
+		display:inline-block;
+		width:32px;		
+}
+.lab_car{background-color:#DA5E43; width:46px;}
+.lab_cottage{background-color:#FFC740;width:46px;}
+.lab_elevator{background-color:#45A21C;width:46px;}
+.lab_thorough{background-color:#DA5E43; width:60px;}
+.lab_decoration{background-color:#45A21C;width:46px;}
+</style>		
+		<div class="common_box" >
+				<div style="width:980px;height:100%;float:left;border:1px solid grey;margin-top:5px;">
+					<div class="sub_title" style="margin:10px 20px 0px 20px;">搜索房源:</div>
+					房源类型:<input class="search_form" type="text" value="二手房出租"/>
+				</div>
+<div style="clear:both;"></div>	
+				<div style="width:760px;height:auto;float:left;border:1px solid grey;margin-top:3px;">
+						<div class="house_info_list">
+								<div style="height:36px;float:left;margin:10px 20px 0px 20px;" class="sub_title">推荐房源</div> 
+								<div class="how_to_recommend" style="height:36px;float:left;margin:15px 20px 0px 0px;"> <a href="#">(如何加入推荐)</a> </div>
+								<div style="clear:both;"></div>
+								<div class="house_info_list">
+										<div class="house_table">
+												
+												<div class="house_info_list_main">
+														
+														<div class="list_title">
+															<span class="lab2 lab_top">置顶</span><span class="lab2 lab_hurry">加急</span> <span class="lab2 lab_recommend">推荐</span>
+															龙华苑135平带车位小房85万
+														</div>
+														<div class="house_zone">龙华苑</div>
+														<div class="house_size"><span>120</span>平</div>
+														<div class="house_price"><span>180万</span></div>
+														
+														<div class="list_user">由 天运中介 2015年6月1日 提供</div>
+												</div>
+												
+												
+												<!--
+												<div class="house_label_free">
+														<span class="lab2 lab_thorough">南北通透</span><span class="lab2 lab_car">带车库</span>
+														<span class="lab2 lab_elevator">带电梯</span><span class="lab2 lab_cottage">带小房</span>
+														<span class="lab2 lab_decoration">精装修</span>
+												</div> -->
+										</div>
+										<div style="clear:both;"></div>
+										
+										
+										<div class="house_table"></div>
+										<div class="house_table"></div>
+										<div class="house_table"></div>
+										<div class="house_table"></div>
+										<div class="house_table"></div>
+								</div>
+						</div>
+				</div>
+		</div>
+		
+		<include file="./Application/Home/View/index/sub_foot.html" />
+</body>
+</html>

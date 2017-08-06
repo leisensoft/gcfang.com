@@ -1,0 +1,18 @@
+[ 2015-12-08T02:43:40+08:00 ] 180.97.106.37 /house/getMoreHouseLise
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000399s ]
+ERR: 无法加载模块:House
+
+[ 2015-12-08T02:43:42+08:00 ] 180.97.106.162 /house/getMoreHouseLise
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000701s ]
+ERR: 无法加载模块:House
+
+[ 2015-12-08T02:43:44+08:00 ] 180.97.106.36 /house/getMoreHouseLise
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000460s ]
+ERR: 无法加载模块:House
+

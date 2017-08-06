@@ -1,0 +1,36 @@
+li { display: inline-block;}
+li { margin: 3px 0;}
+input.labelauty + label { font: 18px "Microsoft Yahei";}
+.autoCompleteList{font-size:18px;font-weight:blod;color:#45A21C;}
+.autoCompleteList:hover{cursor:pointer;color:#DA5E43;font-size:20px;}
+.my_input{font-size:18px;margin:15px 0 0 20px;}
+.yuan_logo_button { 
+font-size:26px;
+font-weight:bold;
+color:white; 
+border: 2px solid #C0C0C0; 
+-moz-border-radius: 10px; 
+-webkit-border-radius: 10px; 
+border-radius: 10px; 
+position:relative; 
+padding:5px; 
+background:#FFF; 
+z-index:2; 
+behavior: url(iecss3.htc); 
+width:120px;
+height:40px;
+margin: 3px 0 0 10px;
+background-color:#45A21C;
+cursor:pointer;
+float:left;
+}
+.yuan_logo_button a{color:#FFF;}
+.yuan_logo_button a:hover{color:#333;}
+.yuan_logo_button:hover{border: 2px solid #333;}
+/*搜索loading图片*/
+.textbox-addon-right{width:0px;}
+.combo-arrow {background: transparent url("../Public/icon/loading.gif") no-repeat scroll center center;}
+/*提交按钮*/
+#submitButton:hover{color:black;}
+/*radio样式*/
+.dowebok {font-size:18px;margin: 15px 0px 0px 20px;}

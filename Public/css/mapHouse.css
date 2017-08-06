@@ -1,0 +1,24 @@
+body, html {width: 100%;height: 100%;margin:0;font-family:"微软雅黑";}
+#allmap{width:84%;height:100%;}
+p{margin-left:0px; font-size:14px;}	
+.select_button div { 
+color:grey; 
+border: 2px solid #C0C0C0; 
+-moz-border-radius: 10px; 
+-webkit-border-radius: 10px; 
+border-radius: 10px; 
+position:relative; 
+padding:8px; 
+background:#FFF; 
+z-index:2; 
+behavior: url(iecss3.htc); 
+float:left;
+text-align:center;
+cursor:pointer;
+}
+.select_button div:hover{color:black;border: 2px solid black; }
+.sell_type{font-weight:bold;width:35%;font-size:26px;margin : 0 0 30px 10px;}
+.house_type{width:80%;font-size:24px;margin : 0 0 10px 10px;}
+.main_left{width:16%;height:100%;float:left;}
+.main_left_title{width:100%;height;35px;margin:10px auto;font-size:28px;text-align:center;}
+.main_left_back{width:100%;height;35px;margin:10px auto;text-align:center;}

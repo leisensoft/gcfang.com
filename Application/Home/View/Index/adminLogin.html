@@ -1,0 +1,58 @@
+<include file="./Application/Home/View/Index/sub_header.html" title="后台管理" />
+</head>
+<body style="text-align:center;">
+    <div class="easyui-panel" title=" " style="width:400px;">
+        <div style="padding:10px 60px 20px 60px">
+        <form id="ff" method="post">
+            <table cellpadding="5">
+                <tr>
+                    <td>Name:</td>
+                    <td><input class="easyui-textbox" type="text" id="m_name" name="m_name" data-options="required:true"></input></td>
+                </tr>
+                <tr>
+                    <td>password:</td>
+                    <td><input class="easyui-textbox" type="password" id="password" name="password" data-options="required:true"></input></td>
+                </tr>
+            </table>
+        </form>
+        <div style="text-align:center;padding:5px">
+            <a href="javascript:void(0)" class="easyui-linkbutton" onclick="submitLoginForm()">Submit</a>
+            <a href="javascript:void(0)" class="easyui-linkbutton" onclick="clearForm()">Clear</a>
+        </div>
+        </div>
+    </div>
+    <script>
+        function submitForm(){
+            $('#ff').form('submit');
+        }
+        function clearForm(){
+            $('#ff').form('clear');
+        }
+function submitLoginForm(){
+		$('#ff').form('submit',{
+			url: 'http://{$Think.server.server_name}/index/submitManagerLogin',
+			onSubmit: function(){
+				if(''==$("#m_name").val()){
+					alert('不能为空');
+					$("#m_name").focus();
+					return false;
+				}
+				if(''==$("#password").val()){
+					alert('不能为空');
+					$("#password").focus();
+					return false;
+				}	
+			},
+		success: function(result){
+					var result = eval('('+result+')');
+					if (result.errorMsg){
+						alert(result.errorMsg);
+					} else {
+					    location.href = 'http://{$Think.server.server_name}/benben/';
+					}
+				}
+		});
+}
+    </script>
+</body>
+</html>

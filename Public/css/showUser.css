@@ -1,0 +1,59 @@
+.u_title { 
+font-size:28px;
+font-weight:bold;
+color:white; 
+border: 2px solid #C0C0C0; 
+-moz-border-radius: 10px; 
+-webkit-border-radius: 10px; 
+border-radius: 10px; 
+position:relative; 
+padding:5px; 
+background:#45A21C; 
+z-index:2; 
+behavior: url(iecss3.htc); 
+text-align:center;
+}
+.u_title_url{font-size:13px;margin:0 0 0 30px;}
+
+.user_info{width:980px;height:250px;margin:0 auto;}
+.about_us{width:650px;height:240px;margin:5px 0 5px 0px;;float:left;border:1px solid #C3D9E0;float:left;}
+.connect_us{width:315px;height:240px;margin:5px 0 5px 5px;;float:left;border:1px solid #C3D9E0; float:left;}
+
+.about_info{float:left;width:430px;height:240px;}
+.about_title{color:#DA5E43; font-size:26px; font-weight:bold; float:left;margin:10px 0 10px 0px;width:100%;line-height:35px;}
+.about_content{font-size:16px;margin:10px;line-height:21px;}
+.connect_content{font-size:16px;margin:10px;line-height:30px;}
+
+.about_pic{float:left;width:205px;height:100%;margin-left:10px;}
+.about_pic img{width:205px;height:240px;}
+
+.u_list_box{width:973px;height:auto;margin:5px auto;float:left;}
+.tabs-header, .tabs-tool {background-color: white;}
+.friend_link_box{width:980px;height:30px;margin:5px auto;background-color:#F6F6F6;}
+.friend_link_box a{float: left;line-height: 24px;height: 24px;overflow: hidden;padding: 0px 10px;color: #666;font-size: 14px;}
+.friend_link_box a:hover{text-decoration:underline;}
+
+.foot_box{border:1px solid #C3D9E0;}
+
+/*信息列表*/
+.info_tabs{width:980px;float:left;min-height:500px;}
+.info_tabs ul li{height:30px;margin-top:0px;padding-top:0px; cursor:pointer;font: 16px/1.5 Tahoma,"Microsoft Yahei","Simsun";border-bottom: 1px solid #CDCDCD;border-radius: 15px;}
+.info_tabs ul li:hover{background-color:#D0D5DB;}
+.info_tabs ul li span{display:-moz-inline-box;display:inline-block;}
+.info_tabs_zone{color:#45A21C;margin-left:3px;width:140px;}
+.info_tabs_price{color:#DA5E43;margin-left:5px;width:76px;}
+.info_tabs_size{color:grey;margin-left:5px;width:86px;}
+.info_tabs_date{color:grey;margin-left:3px;width:62px;font-size:15px;}
+.info_tabs_title{margin:0 5px 0 10px;height:18px;width:506px;display:-moz-inline-box;display:inline-block;font-size:14px;overflow: hidden}
+.house_page{background-color:#45A21C;color:white;font-size:16px;border-radius:5px;text-align:center;margin:10px 290px;}
+/*加载更多*/
+.loading {float:left;background:#DA5E43;color:white;font-size:20px;padding:5px 10px;text-align:center;width:700px;margin:0px auto;display:none;border-radius: 5px;}
+.loadingmore {float:left;background:#DA5E43;color:white;font-size:20px;padding:5px 10px;text-align:center;width:728px;margin:0px auto;display:block;border-radius: 15px;cursor:pointer;}
+.loadingmore:hover { border:1px solid grey;color:black;}
+
+.page{font-size:16px;text-align:center;}
+.page div{line-height:30px;margin-top:10px;border:1px solid #C3D9E0;}
+.current{color:red;font-weight:bold;margin:0 10px;}
+.num{margin:0 10px;}
+/*关于我们*/
+.main_left{width:980px;height:80px;margin:20px 0 0 0;}

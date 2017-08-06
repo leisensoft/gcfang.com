@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	<style type="text/css">
+		body, html {width: 100%;height: 100%;margin:0;font-family:"微软雅黑";}
+		#allmap{width:100%;height:100%;}
+		p{margin-left:5px; font-size:14px;}
+	</style>
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=nlmv0V9pCDtmCuMIr6gDzWAn"></script>
+	<title>藁城交通违章摄像头一览</title>
+</head>
+<body>
+	<div style="width:20%;float:left;" >
+	<a target=_blank href="http://www.gcfang.cn/"><img src="http://www.gcfang.cn/Public/img/logo/1.png"/></a>
+		<div style="margin:30px 10px;">
+		    
+			 本程序由<a target=_blank href="http://www.gcfang.cn/">藁城房</a>提供<br/>
+			 点击体验 <a target=_blank href="http://www.gcfang.cn/index/mapHouse.html">地图找房</a> 
+			 <br/><br/>
+			
+		
+			 信息通过网络收集,如有错误或不全请联系我及时更正!<br/><br/>
+			 联系方式:<br/><br/>
+			 QQ:826909082
+			 <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=826909082&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:826909082:51" alt="点击这里给我发消息" title="点击这里给我发消息"/></a>				
+			 <br/>QQ群:344742767
+			 <a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=7a7eccbb392ffdae289ce789a732279b7917e602706cee940fa2f61994808fce"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="廉州房产网" title="廉州房产网"></a>
+			 
+			 <hr/> <br/>违章查询<br/>
+			
+			 <form id="myformjdc" name="myformjdc" method="POST" action="http://www.hbgajg.com/service/show-12-42.html" target="_blank" onSubmit="return SearchJDC2();">
+        <table class="tbSrh">
+            <tr><td>
+			<select name="CC_JDCWZ_OneArea" id="carArea" class="x1"  >
+			<option value="12">京</option><option value="13" >津</option>
+			<option value="11" selected="selected">冀</option><option value="14" >晋</option>
+			<option value="15">鲁</option><option value="16" >蒙</option>
+			<option value="17">辽</option><option value="18" >吉</option>
+			<option value="19">黑</option><option value="20" >沪</option>
+			<option value="21">苏</option><option value="22" >浙</option>
+			<option value="23">皖</option><option value="24" >闽</option>
+			<option value="25">赣</option><option value="26" >豫</option>
+			<option value="27">鄂</option><option value="28" >湘</option>
+			<option value="29">粤</option><option value="30" >桂</option>
+			<option value="31">琼</option><option value="32" >渝</option>
+			<option value="33">川</option><option value="34" >贵</option>
+			<option value="35">云</option><option value="36" >藏</option>
+			<option value="37">陕</option><option value="38" >甘</option>
+			<option value="39">青</option><option value="40" >宁</option>
+			<option value="41">新</option><option value="42" >台</option>
+			</select><select name="CC_JDCWZ_OneZimu" id="carZimu" class="x2" >
+			<option value="11" >A</option><option value="12" >B</option>
+			<option value="13" >C</option><option value="14" >D</option>
+			<option value="15" >E</option><option value="16" >F</option>
+			<option value="17" >G</option><option value="18" >H</option>
+			<option value="20" >J</option><option value="28" >R</option>
+			<option value="29" >S</option><option value="30" >T</option>
+			<option value="25" >O</option>
+			</select>
+                </td>
+                <td>
+                <input type="text" onblur="if (value ==''){value='车牌号'}" onfocus="if (value =='车牌号'){value =''}" name="CC_JDCWZ_Two" class="CC_JDCWZ_Two" id="CC_JDCWZ_Two" value="车牌号" maxlength="7" />
+                </td>
+            </tr><tr>
+            <td><select name="CC_JDCWZ_Three" id="CC_JDCWZ_Three" class="sx_set">
+		<option value="01" >大型汽车</option>
+		<option value="02" selected="selected">小型汽车</option>
+		<option value="03" >使馆汽车</option>
+		<option value="04" >领馆汽车</option>
+		<option value="05" >境外汽车</option>
+		<option value="06" >外籍汽车</option>
+		<option value="07" >两、三轮摩托车</option>
+		<option value="08" >轻便摩托车</option>
+		<option value="09" >使馆摩托车</option>
+		<option value="10" >领馆摩托车</option>
+		<option value="11" >境外摩托车</option>
+		<option value="12" >外籍摩托车</option>
+		<option value="13" >农用运输车</option>
+		<option value="14" >拖拉机</option>
+		<option value="15" >挂车</option>
+		<option value="16" >教练汽车</option>
+		<option value="17" >教练摩托车</option>
+		<option value="18" >试验汽车</option>
+		<option value="19" >试验摩托车</option>
+		<option value="20" >临时入境汽车</option>
+		<option value="21" >临时入境摩托车</option>
+		<option value="22" >临时行驶车</option>
+		<option value="23" >警用汽车</option>
+		<option value="24" >警用摩托</option>
+                </select>
+			</td><td>
+			
+            <input type="text" onblur="if (value ==''){value='识别代号后4位'}" name="CC_JDCWZ_Four" class="CC_JDCWZ_Four" id="CC_JDCWZ_Four" onfocus="if (value =='识别代号后4位'){value =''}" value="识别代号后4位" maxlength="4"  />
+			
+			<input type="hidden" name="aapi" id="aapi" value="" />
+			</td>
+			</tr>
+			<tfoot>
+            <tr><td colspan="2">
+			<ul class="clearfix">
+			<li class="c1">
+				<a href="http://www.hbgajg.com/html/2012/1229/9229.html" target="_blank"> 信息查询帮助</a>
+			</li>
+			<li class="c2"><input type="submit" value="查询" class="btn" /></li>
+			</ul>
+            </td></tr>
+			</tfoot>
+        </table>
+        </form>
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+		</div>
+	</div>
+	<div style="width:80%;float:left;" id="allmap"></div>
+</body>
+</html>
+<script type="text/javascript">
+	// 百度地图API功能	
+	map = new BMap.Map("allmap", {enableMapClick:false}); //构造底图时，关闭底图可点功能
+	
+	map.centerAndZoom(new BMap.Point(114.853497,38.027829), 15);
+	var data_info = [
+					 [114.865678,38.036306,"<span style='font-weight:bold;'>307国道与昌盛街交叉口</span><br>功能：不按规定车道行驶抓拍<br/>"],
+					 [114.830339,38.033919,"<span style='font-weight:bold;'>307国道与北马街交叉口</span><br>功能：不按规定车道行驶抓拍<br/>"],
+					 [114.859381,38.036001,"<span style='font-weight:bold;'>307国道与东城街交叉口</span><br>功能：不按规定车道行驶抓拍<br/>"],
+					 [114.854305,38.035859,"<span style='font-weight:bold;'>307国道与四明街交叉口</span><br>功能：不按规定车道行驶抓拍<br/>"],
+					 [114.746136,38.038601,"<span style='font-weight:bold;'>307国道与机场路交叉口</span><br>功能：不按规定车道行驶抓拍,逆行,闯红灯抓拍<br/>"],
+					 [114.957139,38.032811,"<span style='font-weight:bold;'>307国道与定魏线交叉口</span><br>功能：闯红灯抓拍<br/>"],
+					 [114.818674,38.032978,"<span style='font-weight:bold;'>307国道与金五线交叉口</span><br>功能：闯红灯抓拍<br/>"],
+					 [114.859866,38.03177,"<span style='font-weight:bold;'>东城街与工业路交叉口</span><br>功能：不按规定车道行驶抓拍<br/>"],
+					 [114.865629,38.031791,"<span style='font-weight:bold;'>昌盛街与工业交叉口</span><br>功能：交通信号灯，不按规定车道行驶抓拍<br/>"],
+					 [114.854269,38.031723,"<span style='font-weight:bold;'>四明街与工业路交叉口</span><br>功能：不按规定车道行驶抓拍<br/>"],
+					 [114.865736,38.027773,"<span style='font-weight:bold;'>昌盛街与廉州路交叉口</span><br>功能：闯红灯抓拍<br/>"],
+					 [114.860612,38.027677,"<span style='font-weight:bold;'>东城街与廉州路交叉口</span><br>功能：闯红灯抓拍<br/>"],
+					 [114.848974,38.027538,"<span style='font-weight:bold;'>通安街与廉州路交叉口</span><br>功能：不按规定车道行驶抓拍<br/>"],
+					 [114.748737,38.22218,"<span style='font-weight:bold;'>机场路姚村路段<br/>(204省道13公里380米)</span><br>功能：测速抓拍限速30KM/h<br/>"],
+					 [114.736448,38.039823,"<span style='font-weight:bold;'>307国道内族路段<br/>(307国道289公里300米)</span><br>功能：测速抓拍限速80KM/h<br/>"],
+					 [114.83165,38.027115,"<span style='font-weight:bold;'>藁梅路与廉州路交叉口东100米</span><br>违章停车抓拍<br/>"],
+					 [114.847784,38.035344,"<span style='font-weight:bold;'>岐银线藁城汽车站路段</span><br>违章停车抓拍<br/>"],	
+					 [114.843921,38.022756,"<span style='font-weight:bold;'>育才路与世纪街交口</span><br>功能：不按规定车道行驶抓拍<br/>"],						 
+					
+					
+					];
+	var opts = {
+				width : 250,     // 信息窗口宽度
+				height: 66,     // 信息窗口高度
+				title : "" , // 信息窗口标题
+				enableMessage:true//设置允许信息窗发送短息
+			   };
+	for(var i=0;i<data_info.length;i++){
+		var marker = new BMap.Marker(new BMap.Point(data_info[i][0],data_info[i][1]));  // 创建标注
+		var content = data_info[i][2];
+		map.addOverlay(marker);               // 将标注添加到地图中
+		addClickHandler(content,marker);
+	}
+	function addClickHandler(content,marker){
+		marker.addEventListener("onmouseover",function(e){
+			openInfo(content,e)}
+		);
+	}
+	function openInfo(content,e){
+		var p = e.target;
+		var point = new BMap.Point(p.getPosition().lng, p.getPosition().lat);
+		var infoWindow = new BMap.InfoWindow(content,opts);  // 创建信息窗口对象 
+		map.openInfoWindow(infoWindow,point); //开启信息窗口
+	}
+</script>

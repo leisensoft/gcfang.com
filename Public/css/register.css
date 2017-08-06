@@ -1,0 +1,44 @@
+.my_input{width:100%;font-size:18px;margin:15px 0 0 20px;}
+.my_input2{width:370px;font-size:18px;margin:15px 0 0 30px;}
+.my_note{ width:100%;font-size:14px;margin:2px 0 0 20px;color:red;}
+.my_login{
+width: 218px;
+display: inline-block;
+font-family: helvetica,arial,sans-serif;
+font-weight: bold;
+margin: 0px;
+list-style: outside none none;
+border: 2px solid #DFDFDF;
+border-radius: 2px;
+padding: 11px 9px;
+color: #595959;
+vertical-align: middle;
+background-color: #FFF;
+transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+resize: none;
+outline: medium none;
+font-size: 16px;
+line-height: 18px;
+}
+.my_login:focus{outline: 0px none;border: 2px solid #58B12E;}
+.input_front{float:left;width:66px;line-height:50px;}
+.yuan_login_button { 
+font-size:26px;
+font-weight:bold;
+color:white; 
+border: 2px solid #C0C0C0; 
+-moz-border-radius: 10px; 
+-webkit-border-radius: 10px; 
+border-radius: 10px; 
+position:relative; 
+padding:5px; 
+background:#FFF; 
+z-index:2; 
+behavior: url(iecss3.htc); 
+width:220px;
+height:27px;
+margin: 3px 0 0 50px;
+background-color:#45A21C;
+cursor:pointer;
+}
+.yuan_login_button:hover{border:2px solid black;color:black;}

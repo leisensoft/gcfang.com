@@ -1,0 +1,138 @@
+[ 2015-11-01T15:38:21+08:00 ] 180.97.106.161 /house/getMoreHouseLise
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000746s ]
+ERR: 无法加载模块:House
+
+[ 2015-11-01T15:38:22+08:00 ] 180.97.106.37 /house/getMoreHouseLise
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000455s ]
+ERR: 无法加载模块:House
+
+[ 2015-11-01T15:38:22+08:00 ] 180.97.106.162 /house/getMoreHouseLise
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000482s ]
+ERR: 无法加载模块:House
+
+[ 2015-11-01T15:38:22+08:00 ] 180.97.106.162 /house/getMoreHouseLise
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000584s ]
+ERR: 无法加载模块:House
+
+[ 2015-11-01T15:38:49+08:00 ] 180.97.106.37 /house/searchHouse
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000611s ]
+ERR: 无法加载模块:House
+
+[ 2015-11-01T15:40:16+08:00 ] 180.97.106.36 /index/getMoreHouseList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000428s ]
+ERR: 无法加载模块:Index
+
+[ 2015-11-01T15:40:24+08:00 ] 180.97.106.36 /index/getMoreHouseList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002470s ]
+ERR: 无法加载模块:Index
+
+[ 2015-11-01T15:40:39+08:00 ] 180.97.106.161 /index/getMoreHouseList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000619s ]
+ERR: 无法加载模块:Index
+
+[ 2015-11-01T15:42:23+08:00 ] 180.97.106.36 /index/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000460s ]
+ERR: 无法加载模块:Index
+
+[ 2015-11-01T15:42:26+08:00 ] 180.97.106.37 /index/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000429s ]
+ERR: 无法加载模块:Index
+
+[ 2015-11-01T15:42:31+08:00 ] 180.97.106.36 /index/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001720s ]
+ERR: 无法加载模块:Index
+
+[ 2015-11-01T15:42:31+08:00 ] 180.97.106.37 /index/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000694s ]
+ERR: 无法加载模块:Index
+
+[ 2015-11-01T15:42:34+08:00 ] 180.97.106.162 /index/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000456s ]
+ERR: 无法加载模块:Index
+
+[ 2015-11-01T15:42:38+08:00 ] 180.97.106.162 /index/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000423s ]
+ERR: 无法加载模块:Index
+
+[ 2015-11-01T15:42:39+08:00 ] 180.97.106.36 /index/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000564s ]
+ERR: 无法加载模块:Index
+
+[ 2015-11-01T15:42:41+08:00 ] 180.97.106.36 /index/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000424s ]
+ERR: 无法加载模块:Index
+
+[ 2015-11-01T15:43:00+08:00 ] 180.97.106.37 /index/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000615s ]
+ERR: 无法加载模块:Index
+
+[ 2015-11-01T15:43:02+08:00 ] 180.97.106.162 /index/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000441s ]
+ERR: 无法加载模块:Index
+
+[ 2015-11-01T15:43:03+08:00 ] 180.97.106.161 /index/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000428s ]
+ERR: 无法加载模块:Index
+
+[ 2015-11-01T15:43:06+08:00 ] 180.97.106.161 /index/register
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000458s ]
+ERR: 无法加载模块:Index
+
+[ 2015-11-01T15:45:01+08:00 ] 180.97.106.162 /index/verify_code?id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003067s ]
+ERR: 无法加载模块:Index
+
+[ 2015-11-01T15:45:08+08:00 ] 180.97.106.36 /index/verify_code?id=1&rnd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000639s ]
+ERR: 无法加载模块:Index
+
+[ 2015-11-01T15:45:43+08:00 ] 180.97.106.36 /index/verify_code?id=1&rnd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000468s ]
+ERR: 无法加载模块:Index
+

@@ -1,0 +1,42 @@
+[ 2015-11-26T17:23:41+08:00 ] 180.97.106.37 /house/getMoreHouseLise
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000451s ]
+ERR: 无法加载模块:House
+
+[ 2015-11-26T17:23:50+08:00 ] 180.97.106.161 /house/getMoreHouseLise
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002475s ]
+ERR: 无法加载模块:House
+
+[ 2015-11-26T17:23:51+08:00 ] 180.97.106.36 /house/getMoreHouseLise
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000550s ]
+ERR: 无法加载模块:House
+
+[ 2015-11-26T17:23:53+08:00 ] 180.97.106.161 /house/getMoreHouseLise
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000674s ]
+ERR: 无法加载模块:House
+
+[ 2015-11-26T17:24:11+08:00 ] 180.97.106.36 /index/getMoreHouseList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000454s ]
+ERR: 无法加载模块:Index
+
+[ 2015-11-26T17:24:26+08:00 ] 180.97.106.162 /index/getMoreHouseList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000684s ]
+ERR: 无法加载模块:Index
+
+[ 2015-11-26T17:24:34+08:00 ] 180.97.106.162 /index/getMoreHouseList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000521s ]
+ERR: 无法加载模块:Index
+

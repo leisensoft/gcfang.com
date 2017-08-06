@@ -1,0 +1,95 @@
+[ 2016-01-09T22:59:43+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.013001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014001s ]
+SQL: SHOW COLUMNS FROM `lei1_user` [ RunTime:0.0580s ]
+SQL: SHOW COLUMNS FROM `lei1_site` [ RunTime:0.0250s ]
+SQL: SHOW COLUMNS FROM `lei1_house` [ RunTime:0.0230s ]
+SQL: SHOW COLUMNS FROM `lei1_zone` [ RunTime:0.0230s ]
+SQL: SHOW COLUMNS FROM `lei1_article` [ RunTime:0.0310s ]
+SQL: SHOW COLUMNS FROM `lei1_manager` [ RunTime:0.0240s ]
+SQL: SELECT * FROM `lei1_site` WHERE ( area_id=1 ) LIMIT 1   [ RunTime:0.0140s ]
+NOTIC: [8] Undefined index: lei666_id D:\UPUPW_AP5.4\vhosts\gcfang.c\Application\Home\Controller\IndexController.class.php 第 239 行.
+SQL: SELECT `id`,`user_id`,`title`,`size`,`price`,`house_type`,`sell_type`,`top_to_time`,`hurry_to_time`,lei1_house.create_time,`zone_name` FROM `lei1_house` WHERE lei1_house.house_state = 1 AND ( `top_to_time` > 1452351583  ) ORDER BY lei1_house.id desc  [ RunTime:0.0020s ]
+NOTIC: [8] Undefined variable: sellHouse D:\UPUPW_AP5.4\vhosts\gcfang.c\Application\Home\Controller\IndexController.class.php 第 59 行.
+NOTIC: [8] Undefined variable: rentHouse D:\UPUPW_AP5.4\vhosts\gcfang.c\Application\Home\Controller\IndexController.class.php 第 60 行.
+NOTIC: [8] Undefined variable: shopHouse D:\UPUPW_AP5.4\vhosts\gcfang.c\Application\Home\Controller\IndexController.class.php 第 61 行.
+NOTIC: [8] Undefined variable: garageHouse D:\UPUPW_AP5.4\vhosts\gcfang.c\Application\Home\Controller\IndexController.class.php 第 62 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: user_name D:\UPUPW_AP5.4\vhosts\gcfang.c\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 29 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.198011s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.199011s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.021001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.021001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.015001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.015001s ]
+
+[ 2016-01-09T22:59:44+08:00 ] 127.0.0.1 /Public/Public/icon/loading.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005001s ]
+
+[ 2016-01-09T22:59:44+08:00 ] 127.0.0.1 /index/getMoreHouseList
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.005000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.015001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.016001s ]
+SQL: SHOW COLUMNS FROM `lei1_user` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `lei1_site` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `lei1_house` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `lei1_zone` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `lei1_article` [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `lei1_manager` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `lei1_site` WHERE ( area_id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: lei666_id D:\UPUPW_AP5.4\vhosts\gcfang.c\Application\Home\Controller\IndexController.class.php 第 239 行.
+NOTIC: [8] Undefined index: indexSearchValue D:\UPUPW_AP5.4\vhosts\gcfang.c\Application\Home\Controller\IndexController.class.php 第 326 行.
+SQL: SELECT `id`,`user_id`,`title`,`size`,`price`,`house_type`,`sell_type`,`top_to_time`,`hurry_to_time`,lei1_house.create_time,`zone_name` FROM `lei1_house` WHERE `house_type` = 1 AND `sell_type` = 1 AND lei1_house.house_state = 1 AND lei1_house.area_id = '1' ORDER BY lei1_house.id desc LIMIT 0,20   [ RunTime:0.0010s ]
+NOTIC: [8] Undefined variable: houseHtml D:\UPUPW_AP5.4\vhosts\gcfang.c\Application\Home\Controller\IndexController.class.php 第 334 行.
+NOTIC: [8] Undefined index: indexSearchValue D:\UPUPW_AP5.4\vhosts\gcfang.c\Application\Home\Controller\IndexController.class.php 第 336 行.
+NOTIC: [8] Undefined variable: tihs D:\UPUPW_AP5.4\vhosts\gcfang.c\Application\Home\Controller\IndexController.class.php 第 343 行.
+NOTIC: [8] Trying to get property of non-object D:\UPUPW_AP5.4\vhosts\gcfang.c\Application\Home\Controller\IndexController.class.php 第 343 行.
+NOTIC: [8] Undefined variable: tihs D:\UPUPW_AP5.4\vhosts\gcfang.c\Application\Home\Controller\IndexController.class.php 第 343 行.
+NOTIC: [8] Trying to get property of non-object D:\UPUPW_AP5.4\vhosts\gcfang.c\Application\Home\Controller\IndexController.class.php 第 343 行.
+NOTIC: [8] Undefined variable: tihs D:\UPUPW_AP5.4\vhosts\gcfang.c\Application\Home\Controller\IndexController.class.php 第 343 行.
+NOTIC: [8] Trying to get property of non-object D:\UPUPW_AP5.4\vhosts\gcfang.c\Application\Home\Controller\IndexController.class.php 第 343 行.
+NOTIC: [8] Undefined variable: tihs D:\UPUPW_AP5.4\vhosts\gcfang.c\Application\Home\Controller\IndexController.class.php 第 343 行.
+NOTIC: [8] Trying to get property of non-object D:\UPUPW_AP5.4\vhosts\gcfang.c\Application\Home\Controller\IndexController.class.php 第 343 行.
+NOTIC: [8] Undefined variable: tihs D:\UPUPW_AP5.4\vhosts\gcfang.c\Application\Home\Controller\IndexController.class.php 第 343 行.
+NOTIC: [8] Trying to get property of non-object D:\UPUPW_AP5.4\vhosts\gcfang.c\Application\Home\Controller\IndexController.class.php 第 343 行.
+NOTIC: [8] Undefined variable: tihs D:\UPUPW_AP5.4\vhosts\gcfang.c\Application\Home\Controller\IndexController.class.php 第 343 行.
+NOTIC: [8] Trying to get property of non-object D:\UPUPW_AP5.4\vhosts\gcfang.c\Application\Home\Controller\IndexController.class.php 第 343 行.
+NOTIC: [8] Undefined variable: tihs D:\UPUPW_AP5.4\vhosts\gcfang.c\Application\Home\Controller\IndexController.class.php 第 343 行.
+NOTIC: [8] Trying to get property of non-object D:\UPUPW_AP5.4\vhosts\gcfang.c\Application\Home\Controller\IndexController.class.php 第 343 行.
+NOTIC: [8] Undefined variable: tihs D:\UPUPW_AP5.4\vhosts\gcfang.c\Application\Home\Controller\IndexController.class.php 第 343 行.
+NOTIC: [8] Trying to get property of non-object D:\UPUPW_AP5.4\vhosts\gcfang.c\Application\Home\Controller\IndexController.class.php 第 343 行.
+NOTIC: [8] Undefined variable: tihs D:\UPUPW_AP5.4\vhosts\gcfang.c\Application\Home\Controller\IndexController.class.php 第 343 行.
+NOTIC: [8] Trying to get property of non-object D:\UPUPW_AP5.4\vhosts\gcfang.c\Application\Home\Controller\IndexController.class.php 第 343 行.
+NOTIC: [8] Undefined variable: tihs D:\UPUPW_AP5.4\vhosts\gcfang.c\Application\Home\Controller\IndexController.class.php 第 343 行.
+NOTIC: [8] Trying to get property of non-object D:\UPUPW_AP5.4\vhosts\gcfang.c\Application\Home\Controller\IndexController.class.php 第 343 行.
+NOTIC: [8] Undefined variable: tihs D:\UPUPW_AP5.4\vhosts\gcfang.c\Application\Home\Controller\IndexController.class.php 第 343 行.
+NOTIC: [8] Trying to get property of non-object D:\UPUPW_AP5.4\vhosts\gcfang.c\Application\Home\Controller\IndexController.class.php 第 343 行.
+NOTIC: [8] Undefined variable: tihs D:\UPUPW_AP5.4\vhosts\gcfang.c\Application\Home\Controller\IndexController.class.php 第 343 行.
+NOTIC: [8] Trying to get property of non-object D:\UPUPW_AP5.4\vhosts\gcfang.c\Application\Home\Controller\IndexController.class.php 第 343 行.
+NOTIC: [8] Undefined variable: tihs D:\UPUPW_AP5.4\vhosts\gcfang.c\Application\Home\Controller\IndexController.class.php 第 343 行.
+NOTIC: [8] Trying to get property of non-object D:\UPUPW_AP5.4\vhosts\gcfang.c\Application\Home\Controller\IndexController.class.php 第 343 行.
+NOTIC: [8] Undefined variable: tihs D:\UPUPW_AP5.4\vhosts\gcfang.c\Application\Home\Controller\IndexController.class.php 第 343 行.
+NOTIC: [8] Trying to get property of non-object D:\UPUPW_AP5.4\vhosts\gcfang.c\Application\Home\Controller\IndexController.class.php 第 343 行.
+NOTIC: [8] Undefined variable: tihs D:\UPUPW_AP5.4\vhosts\gcfang.c\Application\Home\Controller\IndexController.class.php 第 343 行.
+NOTIC: [8] Trying to get property of non-object D:\UPUPW_AP5.4\vhosts\gcfang.c\Application\Home\Controller\IndexController.class.php 第 343 行.
+NOTIC: [8] Undefined variable: tihs D:\UPUPW_AP5.4\vhosts\gcfang.c\Application\Home\Controller\IndexController.class.php 第 343 行.
+NOTIC: [8] Trying to get property of non-object D:\UPUPW_AP5.4\vhosts\gcfang.c\Application\Home\Controller\IndexController.class.php 第 343 行.
+NOTIC: [8] Undefined index: indexSearchValue D:\UPUPW_AP5.4\vhosts\gcfang.c\Application\Home\Controller\IndexController.class.php 第 349 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.014001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.014001s ]
+

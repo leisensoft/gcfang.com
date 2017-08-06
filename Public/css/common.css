@@ -1,0 +1,46 @@
+
+body {font: 13px/18px "Microsoft YaHei";color: #2E2E2E;background: #F4F4F4 none repeat scroll 0% 0%;}
+/*最顶部样式*/
+.top{
+	overflow: hidden;
+	background-color: #F5F5F5; 
+	border-bottom: 1px solid #D0D5DB;
+	line-height: 27px;
+	width: 100%;
+	height: 27px;
+}
+.top_a{width:980px; margin: 0px auto;}
+.top_left{float:left;}
+.top_right{float:right;}
+.top_a a{display: inline;margin: 0px 5px;color: #333;}
+.top_a a:hover{color: #F60;}
+
+.nav {width: 980px; margin: 0px auto;height: 40px;background-color: #BE0000;-moz-border-radius: 10px; -webkit-border-radius: 10px; border-radius: 10px; }
+.nav ul li { float:left; margin-left:8px; font: 16px/26px "Microsoft YaHei";}
+.nav ul li a { display:block; width:100px; height:40px; line-height:40px; text-align:center; color: #FFF;-moz-border-radius: 10px; -webkit-border-radius: 10px; border-radius: 10px; }
+.nav ul li a:hover{background-color:#FF6600;}
+/*小标题推荐房源 查找房源*/
+.sub_title{ background-color:white; color:grey; font-size:26px; font-weight:bold;}
+/* 加急 推荐 置顶 标签*/
+.lab{
+		border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+		position: relative;
+		cursor: pointer;
+		font-size:14px;
+		color:white;
+		display:-moz-inline-box;
+		display:inline-block;
+		width:16px;		
+}
+
+.lab_hurry{background-color:#DA5E43;}
+.lab_top{background-color:#FFC740;}
+.lab_recommend{background-color:#45A21C;}
+.foot_box{width:980px;height:100%;margin:10px auto; border:1px solid grey;}
+.foot_banner{width: 980px;height: 16px;margin: 10px auto;text-align: center; font-size:12px;}
+.foot_banner a:hover{text-decoration:underline;}
+
+.common_box{width:980px;height:100%;margin:0px auto; }
+
+
+

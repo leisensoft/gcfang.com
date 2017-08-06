@@ -1,0 +1,69 @@
+<include file="./Application/Home/View/Index/sub_header.html" title="{$house_info.title}-{$site_info.web_name}" keywords="{$site_info.keywords}" description="{$site_info.description}" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/houseDetail.css">	
+</head>	
+<body>
+		<include file="./Application/Home/View/Index/sub_nav.html" web_name="{$site_info.web_name}" />	
+		<div class="common_box" >
+				<div style="width:686px;height:auto;float:left;border:1px solid #ccc;margin-top:10px;">
+					  <div style="text-align:center;width:100%;height;35px;margin:10px 0 0 20px;font-size:18px;line-height:28px;">
+						 <h1>{$house_info.title}</h1>房源编号: {$house_info.id}
+					  </div>
+					  <div class="house_info">
+							 <div class="house_zone"><a title="点击查看该小区房源" class="easyui-tooltip" style="color:#45A21C;" target=_blank href="http://{$Think.server.server_name}/house/zoneDetail/id/{$house_info.zone_id}.html">{$house_info.zone_name}</a></div>
+							 <div class="house_size"><span>{$house_info.size}</span>平</div>
+							 <div class="house_price">{$house_info.price}</div>
+							 <div class="house_create_time" style="font-size:14px;">{$house_info.create_time}</div>
+					  </div>
+<div style="clear:both;"></div>
+					  <div style="border-top:1px dashed #000; margin:0 auto;font-size:16px;margin:0 0 0 10px;">
+					  详细信息:
+					  </div>
+					  <div style="margin:30px auto;font-size:16px;">{$house_info.content}</div>	  
+				</div>
+				<div style="width:266px;height:auto;float:left;border:1px solid #ccc;margin:10px 0 0 5px;">
+					<empty name="house_info.personal_tel">
+						<ul class="user_info">
+							
+							<a class="easyui-tooltip" title="点击访问我的主页" target=_blank href="{$user_info.shop_url}"><img src="http://{$Think.server.server_name}/Public/img/user/{$site_info.area_id}/{$user_info.id}.jpg"/></a>
+							<li class="company_name"><a class="easyui-tooltip" title="点击访问我的主页" target=_blank href="http://{$Think.server.server_name}/a/{$user_info.id}">{$user_info.company_name}</a></li>
+							<li>&nbsp;</li>
+							<li>联系人 : {$user_info.person_name}</li>
+							<li>手机 : {$user_info.tel}</li>
+							<notempty name="user_info.shop_tel">
+							<li>电话 : {$user_info.shop_tel}</li>
+							</notempty>
+							<notempty name="user_info.qq">
+								<li>Q Q : {$user_info.qq} <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin={$user_info.qq}&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:{$user_info.qq}:51" alt="点击这里给我发消息" title="点击这里给我发消息"/></a></li>
+							</notempty>
+							<li>地 址: {$user_info.address}</li>
+						</ul>
+					<else/> 
+						<ul class="personal_info">
+							<li style="text-align:center;font-weight:bold;">联系方式</li>
+							<li>联系人 : {$house_info.personal_name}</li>
+							<li>手 机 : {$house_info.personal_tel}</li>
+							<li style="text-align:right;margin-right:10px;"><a onclick="delHouse()" style="border:1px solid #ccc;-moz-border-radius: 10px; -webkit-border-radius: 10px; border-radius: 10px;" class="easyui-tooltip" title="需发布者本人输入密码后删除房源信息">删除房源</a></li>
+						</ul>
+					</empty>			
+				</div>
+		</div>
+		<include file="./Application/Home/View/Index/sub_foot.html" web_name="{$site_info.web_name}" connect_us="{$site_info.connect_us}" count_code="{$site_info.count_code}" />
+<script>
+function delHouse(){
+	 $.messager.prompt('删除房源', '请输入发布房源时设置的密码,如果忘记请联系客服删除.', function(pass){
+									if (pass){
+										  $.post("http://{$Think.server.server_name}/house/personDelHouse",{id:{$house_info.id},pass:pass},function(result){
+												if('err'==result){
+													 $.messager.alert('错误','删除失败','error');
+												}
+												if('ok'==result){
+													 $.messager.alert('提示','删除成功');
+													 location.href = "http://{$Think.server.server_name}";
+												}
+										  });
+									}
+	 });
+}
+</script>
+</body>
+</html>

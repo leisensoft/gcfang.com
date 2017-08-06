@@ -1,0 +1,178 @@
+<div id="content">
+ 													
+	<!--列表TABLE-->	
+    <table id="articlesInfoTable" title="文章管理" class="easyui-datagrid" style="width:1000px;;height:366px"
+    url="http://{$Think.server.server_name}/benben/getArticlesInfoList"
+    toolbar="#articlesInfotoolbar" pagination="true"
+    rownumbers="true" fitColumns="true" singleSelect="true">
+    <thead>
+    <tr>
+			<th field="id" width="3">ID</th>
+			<th field="area_id" width="6">区域ID</th>
+			<th data-options="field:'state', width:5,align:'left',formatter:formatState" >状态</th>
+			<th field="title" width="66">标题</th>
+			<th data-options="field:'type', width:5,align:'left',formatter:formatType" >类型</th>
+			<th field="time" width="15">时间</th>
+    </tr>
+    </thead>
+    </table>
+	<!--工具栏-->
+	<div id="articlesInfotoolbar">
+			<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="newArticle()">新增</a>
+			<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="editArticle()">修改</a>
+			<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="destroyArticle()">删除</a>
+			
+			<span class="textbox easyui-fluid" style="float:right; width: 276px; height: 30px;">
+				<input onkeyup="doSearch()" id="searchValue" class="textbox-text validatebox-text" type="text" autocomplete="off" placeholder="搜索" style="margin-left: 0px; margin-right: 0px; padding-top: 7px; padding-bottom: 7px; width: 266px;">
+				<input class="textbox-value" type="hidden" value="">
+			</span>
+    </div>
+	<!--弹出框-->
+	<div id="articlesInfoDlg" class="easyui-dialog" style="width:1080px;;height:580px;padding:10px 20px" closed="true" buttons="#articlesInfoDlg-buttons">
+		<form id="articleInfoFm" method="post" novalidate>
+			<div class="fitem"><label>id</label><input name="id"  class="easyui-textbox"  disabled="disabled"/></div>
+			<div class="fitem"><label>标题</label><input name="title" class="easyui-textbox" required="true"></div>
+			<div class="fitem"><label>作者</label><input name="author" class="easyui-textbox" required="true" ></div>
+			<div class="fitem"><label>类型</label>
+			<select class="easyui-combobox" name="type">
+				<option value="1">新闻</option>
+				<option value="2">公告</option>
+				<option value="3">自定义</option>
+			 </select>
+			</div>
+			<div class="fitem"><label>创建时间</label><input name="time" class="easyui-textbox" disabled="disabled" ></div>
+			<div class="">
+			<script type="text/plain" id="myArticlesEditor" style="width:980px;height:240px;"></script>
+									    <script type="text/javascript">
+										//var um = UM.getEditor('myEditor');//实例化编辑器
+											$(function() {          
+											var um = UM.getEditor('myArticlesEditor', {   
+											 UEDITOR_HOME_URL: "__PUBLIC__/js/editor/",                
+													 imageUrl: "{:U('Home/Img/upload')}",              
+													imagePath: "__PUBLIC__/upload/",    
+													wordCount: false,               
+											elementPathEnabled: false,            
+											 autoFloatEnabled: false,         
+													 textarea: 'content'            
+													 });    
+											}); 
+										</script>
+			</div>
+		</form>
+    </div>
+	<!--弹出框 摁扭-->
+	<div id="articlesInfoDlg-buttons">
+		<a href="javascript:void(0)" class="easyui-linkbutton c6" iconCls="icon-ok" onclick="saveArticle()" style="width:90px">保存</a>
+		<a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-cancel" onclick="javascript:$('#articlesInfoDlg').dialog('close')" style="width:90px">取消</a>
+    </div>
+		
+<script>
+function formatState(val,row){
+	 if (2 == val){return '删除'};
+	 if (1 == val){return '正常'};
+}
+function formatType(val,row){
+	 if (1 == val){return '新闻'};
+	 if (2 == val){return '公告'};
+	 if (3 == val){return '自定义'};
+}
+//■■■■■■■■■■■■■■■■■■■■■■ GIRD	
+		var url;
+		function newArticle(){
+			$('#articlesInfoDlg').dialog('open').dialog('setTitle','新增文章');
+			$('#articleInfoFm').form('clear');
+			url = 'http://{$Think.server.server_name}/benben/updateArticleInfo';
+		}
+		function editArticle(){
+			var row = $('#articlesInfoTable').datagrid('getSelected');
+			if (row){
+				$('#articlesInfoDlg').dialog('open').dialog('setTitle','修改用户信息');
+				$('#articleInfoFm').form('load',row);
+				UM.getEditor('myArticlesEditor').setContent(row.content, false);//添加编辑框内容
+				url = 'http://{$Think.server.server_name}/benben/updateArticleInfo?id='+row.id;
+			}
+		}
+		function saveArticle(){
+			$('#articleInfoFm').form('submit',{
+				url: url,
+				onSubmit: function(){
+					return $(this).form('validate');
+				},
+			success: function(result){
+						var result = eval('('+result+')');
+						if (result.errorMsg){
+							$.messager.show({title: 'Error',msg: result.errorMsg});
+						} else {
+							$('#articlesInfoDlg').dialog('close'); // close the dialog
+							$('#articlesInfoTable').datagrid('reload'); // reload the article data
+						}
+					}
+			});
+		}
+	
+		function destroyArticle(){
+			var row = $('#articlesInfoTable').datagrid('getSelected');
+			if (row){
+				$.messager.confirm('确认删除','确定要删除['+row.title+']站的信息吗?',function(r){
+				if (r){
+					$.post('http://{$Think.server.server_name}/benben/deleteArticleInfo',{id:row.id,state:2},function(result){
+						if (result.success){
+							$('#articlesInfoTable').datagrid('reload'); // reload the article data
+						} else {
+							$.messager.show({ // show error message
+							title: 'Error',
+							msg: result.errorMsg
+							});
+						}
+					},'json');
+				}else{
+					$.post('http://{$Think.server.server_name}/benben/deleteArticleInfo',{id:row.id,state:1},function(result){
+						if (result.success){
+							$('#articlesInfoTable').datagrid('reload'); // reload the article data
+						} else {
+							$.messager.show({ // show error message
+							title: 'Error',
+							msg: result.errorMsg
+							});
+						}
+					},'json');
+				}
+				});
+			}
+		}
+		
+		function doSearch(){  //■■■■■■■■■■■■■■■■■■■■■■搜索
+			$('#articlesInfoTable').datagrid('load',{
+				searchValue: $('#searchValue').val(),
+				state:$('#state').val()
+			});
+		}
+		$('#articlesInfoTable').datagrid({onDblClickRow: function (rowIndex, rowData) { //■■■■■■■■■■■■■■■■■■■■■■双击表
+				  window.open('http://{$Think.server.server_name}/index/news/id/'+rowData.id);
+				}       
+		}); 
+</script>	
+<style type="text/css">
+    #articleInfoFm{
+    margin:0;
+    padding:10px 30px;
+    }
+    .ftitle{
+    font-size:14px;
+    font-weight:bold;
+    padding:5px 0;
+    margin-bottom:10px;
+    border-bottom:1px solid #ccc;
+    }
+    .fitem{
+    margin-bottom:5px;
+    }
+    .fitem label{
+    display:inline-block;
+    width:80px;
+    }
+    .fitem input{
+    width:160px;
+    }
+    </style>
+</div>

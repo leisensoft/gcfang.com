@@ -1,0 +1,1 @@
+<?php if (!defined('THINK_PATH')) exit();?><li class="info_li"><span class="info_tabs_title">我的天 这是一套测试阿斯蒂芬近距离</span> <span class="info_tabs_zone">宇宙</span> <span class="info_tabs_size">222平米</span> <span class="info_tabs_price">222</span> <span class="info_tabs_date">刚刚</span>	 </li>

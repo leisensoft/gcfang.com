@@ -1,0 +1,151 @@
+<include file="./Application/Home/View/Index/sub_header.html" title="{$zone_info.name} - {$site_info.title}" keywords="{$site_info.keywords}" description="{$site_info.description}" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/zoneDetail.css">	
+</head>	
+<body>
+		<include file="./Application/Home/View/Index/sub_top.html" site_url="{$site_info.area_url}" site_name="{$site_info.web_name}" user_name="{$user_info.person_name}" />
+		<include file="./Application/Home/View/Index/sub_nav.html" web_name="{$site_info.web_name}" />	
+		<div class="common_box" >
+				<div class="info_box">
+				    <div style="width:280px;text-align:center;border-right:1px solid #ccc;;">
+						<div style="width:280px;height:40px;font-size:28px;line-height:0px;">{$zone_info.name}</div>
+						<div style="margin-left:40px;">
+							<ul>
+								<li><span class="house_type"> </span><span class="house_sell_title">出售</span><span class="house_sell_title">出租</span></li>
+								<li><span class="house_type">二手房</span><span class="house_sell">{$countSellHouse}</span><span class="house_sell">{$countRentHouse}</span></li>
+								<li><span class="house_type">车库/位</span><span class="house_sell">{$countSellGarage}</span><span class="house_sell">{$countRentGarage}</span></li>
+								<li><span class="house_type">门市</span><span class="house_sell">{$countSellShop}</span><span class="house_sell">{$countRentShop}</span></li>
+								<li></li>
+							</ul>
+						</div>
+				    </div>
+				  
+				    <div style="width:400px;font-size:14px;text-align:left;border-right:1px solid #ccc;">简介:暂无</div>
+
+				    <div style="width:290px;">图片暂无</div>
+				</div>
+		
+
+
+				<div id="index_tabs" class="easyui-tabs info_tabs"  data-options="plain:true,tabPosition:'top',tabHeight:'36'">
+					 <div title="&nbsp;买 &nbsp; 房" style="padding:10px;">
+							<ul>
+								<foreach name="sellHouse" item="s">
+									<li class="info_li">
+										<a target=_blank href="http://{$Think.server.server_name}/house/detail/id/{$s.id}.html">
+										<gt name="s.hurry_to_time" value="1">
+											<span style="color:red;" class="info_tabs_title">{$s.title}<span class="lab lab_hurry">急</span><span class="lab lab_top">顶</span></span>
+										<else/> 
+											<span class="info_tabs_title">{$s.title}<span class="lab lab_top">顶</span></span>
+										</gt>
+										<span class="info_tabs_size">{$s.size}平</span> <span class="info_tabs_price">{$s.price}</span> <span class="info_tabs_date">{$s.create_time}</span>	
+										</a>
+									</li>
+								</foreach>
+							</ul>
+							<ul id="moreHousesList0"></ul>
+							<div onClick="getMoreHouseLise()" class="loadingmore" id="moreresults0">下一页</div>
+					 </div>
+					 <div title="&nbsp;租 &nbsp; 房" style="padding:10px">
+							<ul>
+								<foreach name="rentHouse" item="s">
+									<li class="info_li">
+									<a target=_blank href="http://{$Think.server.server_name}/house/detail/id/{$s.id}.html">
+										<gt name="s.hurry_to_time" value="1">
+											<span style="color:red;" class="info_tabs_title">{$s.title}<span class="lab lab_hurry">急</span><span class="lab lab_top">顶</span></span>
+										<else/> 
+											<span class="info_tabs_title">{$s.title}<span class="lab lab_top">顶</span></span>
+										</gt>
+										<span class="info_tabs_size">{$s.size}平</span> <span class="info_tabs_price">{$s.price}</span> <span class="info_tabs_date">{$s.create_time}</span>	
+									</a>
+									</li>
+								</foreach>
+							</ul>
+							<ul id="moreHousesList1"></ul>
+							<div onclick="getMoreHouseLise();" class="loadingmore" id="moreresults1">下一页</div>
+					 </div>
+					 <div title="门市/厂房" style="padding:10px">
+					    <ul>
+							<foreach name="shopHouse" item="s">
+								<li class="info_li">
+								<a target=_blank href="http://{$Think.server.server_name}/house/detail/id/{$s.id}.html">
+									<gt name="s.hurry_to_time" value="1">
+										<span style="color:red;" class="info_tabs_title">{$s.title}<span class="lab lab_hurry">急</span><span class="lab lab_top">顶</span></span>
+									<else/> 
+										<span class="info_tabs_title">{$s.title}<span class="lab lab_top">顶</span></span>
+									</gt>
+									<span class="info_tabs_size">{$s.size}平</span> <span class="info_tabs_price">{$s.price}</span> <span class="info_tabs_date">{$s.create_time}</span>	
+								</a>
+								</li>
+							</foreach>
+						</ul>
+						<ul id="moreHousesList2"></ul>
+						<div onclick="getMoreHouseLise();" class="loadingmore" id="moreresults2">下一页</div>
+					 </div>
+					 <div title="车库/车位" style="padding:10px">
+						<ul>
+							<foreach name="garageHouse" item="s">
+								<li class="info_li">
+								<a target=_blank href="http://{$Think.server.server_name}/house/detail/id/{$s.id}.html">
+									<gt name="s.hurry_to_time" value="1">
+										<span style="color:red;" class="info_tabs_title">{$s.title}<span class="lab lab_hurry">急</span><span class="lab lab_top">顶</span></span>
+									<else/> 
+										<span class="info_tabs_title">{$s.title}<span class="lab lab_top">顶</span></span>
+									</gt>
+									<span class="info_tabs_size">{$s.size}平</span> <span class="info_tabs_price">{$s.price}</span> <span class="info_tabs_date">{$s.create_time}</span>	
+								</a>
+								</li>
+							</foreach>
+						</ul>
+						<ul id="moreHousesList3"></ul>
+						<div onclick="getMoreHouseLise();" class="loadingmore" id="moreresults3">下一页</div>
+					 </div>
+				</div>		
+				<div class="ad_box_right">
+				广告位招商
+				</div>
+				
+				<div class="loading" id="loading">正加载更多房源信息~请耐心等待.......</div>
+				<div class="loading" id="nomoreresults">没有更多的房源信息了~</div>
+		</div>
+		<include file="./Application/Home/View/Index/sub_foot.html" connect_us="{$site_info.connect_us}" web_name="{$site_info.web_name}" count_code="{$site_info.count_code}" />
+</body>
+<script>
+function getMoreHouseLise(){ 
+			var tab = $('#index_tabs').tabs('getSelected');
+			var tabNo = $('#index_tabs').tabs('getTabIndex',tab); //index 0:出售 1:出租 2:门市/厂房 3:车库/车位
+			$.ajax({ 
+				url: "http://{$Think.server.server_name}/house/getMoreHouseLise", 
+				type: 'POST',
+				dataType: 'html',
+				data: 'tabNo='+tabNo+'&&liNo='+$('#moreHousesList'+tabNo).children('li').size()+'&&zone_id={$zone_info.id}',
+				beforeSend: function(){
+					 $('#loading').fadeIn();	
+				},
+				success: function(data){
+					if(data){
+						$('#moreHousesList'+tabNo).append(data);
+						$('#loading').fadeOut();
+					}else{
+						$('#moreresults'+tabNo).fadeOut();
+						$('#loading').fadeOut();
+						$('#nomoreresults').fadeIn();
+					} 
+				},
+				error:function(){ alert('ajax error'); },
+			});
+}	
+$('#index_tabs').tabs({
+        onSelect: function () {
+			getMoreHouseLise();
+        }
+});
+$(document).ready(function() {
+	$(window).scroll(function() {
+		//if ($(document).scrollTop()<=0){alert("滚动条已经到达顶部为0");}
+		if ($(document).scrollTop() >= $(document).height() - $(window).height() ) {
+			getMoreHouseLise();
+		}
+	});
+});	
+</script>
+</html>

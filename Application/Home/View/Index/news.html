@@ -1,0 +1,15 @@
+<include file="./Application/Home/View/Index/sub_header.html" title="{$article.title}-{$site_info.web_name}" />
+</head>	
+<body>
+		<include file="./Application/Home/View/Index/sub_top.html" site_url="{$site_info.area_url}" site_name="{$site_info.web_name}" user_name="{$user_info.person_name}" />
+		<include file="./Application/Home/View/Index/sub_nav.html" web_name="{$site_info.web_name}"/>	
+		<div class="common_box" >
+				<div style="width:980px;min-height:500px;_height:500px;float:left;border:1px solid grey;margin-top:6px;">
+				  <div style="width:100%;height;35px;margin:10px auto;font-size:28px;text-align:center;">{$article.title}</div>
+				  <div style="width:100%;height;35px;margin:20px auto;font-size:14px;text-align:center;">作者:{$article.author}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;时间:{$article.time} </div>
+				  <div style="width:980px;height:100%;margin:10px 10px;font-size:16px;">{$article.content}</div>
+				</div>
+		</div>
+		<include file="./Application/Home/View/Index/sub_foot.html" web_name="{$site_info.web_name}" connect_us="{$site_info.connect_us}"  count_code="{$site_info.count_code}" />
+</body>
+</html>
