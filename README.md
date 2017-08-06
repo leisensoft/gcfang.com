@@ -4,7 +4,7 @@
 <br/><br/>
 程序预览图 <br/>
 <br/>后台<br/>
-  ![image](https://github.com/leisensoft/gcfang.com/blob/master/web_preview/gcfang%E5%90%8E%E5%8F%B0.png?raw=true)
+  ![image](https://raw.githubusercontent.com/leisensoft/gcfang.com/master/1_web_preview_img/gcfang%E5%90%8E%E5%8F%B0.png)
 <br/>首页<br/>
   ![image](https://github.com/leisensoft/gcfang.com/blob/master/web_preview/gcfang%E9%A6%96%E9%A1%B5.png?raw=true)
 <br/>首页-手机版<br/>
